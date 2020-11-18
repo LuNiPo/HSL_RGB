@@ -1,5 +1,5 @@
 ## HSL_RGB
-### Just another Arduino Libary
+### Just another Arduino Libary ? - Asyncronous RGB LED Controlling using HSL Color values
 
 This is me getting my Hands down on (RGB) LED controlling. After i studied some already existing Libarys i figured out some things :
 * Many of them are very unflexible with generating Colors or fading the lightness (or the Light intenisty)
