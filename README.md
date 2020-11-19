@@ -29,9 +29,12 @@ instead of delays for generating animation I used the millis() function - a quie
 ###Thats nice! but how do i use it ?
 A few simple steps:
 * Include the libary `#include <RGBControl.h>`
-* Set up an Controller Object `RGBControl Controller(red pin, green pin, blue pin, activeHigh/activeLow)
-**_Note:_ activeHigh/ activeLow defines the usage of your output: Your LED lights up when your pin is high ? - use activeHigh**
-
+* Set up an Controller Object `RGBControl Controller(red pin, green pin, blue pin, activeHigh/activeLow)` **_Note:_** activeHigh/ activeLow defines the usage of your output: **Your LED lights up when your pin is high ? - use activeHigh**
+* Use a few predefiened functions like:
+  * `Controller.HSL(colorAngle, lightness)` For displaying single colors
+  * `Controller.HSL_Fade(speed, lightness)` For fading throught the whole spectrum. _(won't work with delay())_
+  * `Controller.HSL_Area_Fade(speed,Angle,fadeAngle,lightness)` Fades between 2 Colors. _(won't work with delay())_
+  * `Controller.HSL_Hard_Fade(timePerColor,numberOfColors,lightness)` Fades through whole spectrum using predefined number of Steps. _(maybe works with delay()_
 ---
 Image source :
 HSL_color_solid_cylinder.png: SharkD derivative work: SharkD Talk (https://commons.wikimedia.org/wiki/File:HSL_color_solid_cylinder_saturation_gray.png), „HSL color solid cylinder saturation gray“, https://creativecommons.org/licenses/by-sa/3.0/legalcode 
