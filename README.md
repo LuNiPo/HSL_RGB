@@ -6,6 +6,7 @@ This is me getting my Hands down on (RGB) LED controlling. After i studied some 
 * Most of them using delay() functions for animations, which is bad if you want your microcontroller to do more than just blinking some stupid LEDs
 
 so for my new Project there was a need for a different Approach.
+
 ---
 ### How does it work ?
 My approach was to use HSL Colors (Hue Saturation Lightness), honestly this name isnt quite right, since you cant make gray light... anyway
@@ -23,6 +24,13 @@ Lightness is the vertical position on the hull (from black to white). Since we a
 * **50<lightness<=100** fade to white (increase pwm on all channels until they're 1024)
 ### Asyncronous ? - Kind of ... i guess
 instead of delays for generating animation I used the millis() function - a quiet common trick nowadays to do delays without stalling your µC. You can see the idea in one of the Example script. A downside is that you cant use delay() in your script without stalling the animation. Anyways - cause we not using delay you can do things like start stop animations by the push of an button - **at any time!**
+
+---
+###Thats nice! but how do i use it ?
+A few simple steps:
+* Include the libary `#include <RGBControl.h>`
+* Set up an Controller Object `RGBControl Controller(red pin, green pin, blue pin, activeHigh/activeLow)
+**_Note:_ activeHigh/ activeLow defines the usage of your output: Your LED lights up when your pin is high ? - use activeHigh**
 
 ---
 Image source :
