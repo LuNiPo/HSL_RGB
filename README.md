@@ -38,5 +38,13 @@ A few simple steps:
   * `Controller.HSL_Blink(onTime, periodTime, transisionTime, Color)` Do sum blinking - and be able to do some fading from off to on. Transision time is added o the off time period therefor periode time must be > 2 * transisionTime + onTime _(will maybe work with delays() when no transision time is used and period time is bigger than delay())_
   * `Controller.RGB(red,green,blue)` classical way of setting RGB values in percent (0-100) - like why not since we've already an controller object.
 ---
+### How to include?
+
+* Click on the **green code button** on top -> download as .zip file
+* Open your arduino IDE choose **Sketch -> IncludeLibary -> Add Zip libary**
+* Choose the zip file and include it
+* Open on of the example scripts
+
+---
 Image source :
 HSL_color_solid_cylinder.png: SharkD derivative work: SharkD Talk (https://commons.wikimedia.org/wiki/File:HSL_color_solid_cylinder_saturation_gray.png), „HSL color solid cylinder saturation gray“, https://creativecommons.org/licenses/by-sa/3.0/legalcode 
