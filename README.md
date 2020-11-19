@@ -17,10 +17,13 @@ as i've statet we can't generate gray light, therefore only the hull of the cyli
 * 240 is Blue Light
 * Hue > 360 = Hue - 360
 
-Lighness is the height on the hull (from black to white). Since we are also not able to generate Black light the lightness value uses following rules:
+Lightness is the vertical position on the hull (from black to white). Since we are also not able to generate Black light the lightness value uses following rules:
 * **0 <= lightness <50** Do PWM on the outputs to reduce lightintensity (keep proportion of the pwm signals)
 * **lightness = 50** full color (PWM on the outputs matches the calculated values)
 * **50<lightness<=100** fade to white (increase pwm on all channels until they're 1024)
+### Asyncronous ? - Kind of ... i guess
+instead of delays for generating animation I used the millis() function - a quiet common trick nowadays to do delays without stalling your µC. You can see the idea in one of the Example script. A downside is that you cant use delay() in your script without stalling the animation. Anyways - cause we not using delay you can do things like start stop animations by the push of an button - **at any time!**
+
 ---
 Image source :
 HSL_color_solid_cylinder.png: SharkD derivative work: SharkD Talk (https://commons.wikimedia.org/wiki/File:HSL_color_solid_cylinder_saturation_gray.png), „HSL color solid cylinder saturation gray“, https://creativecommons.org/licenses/by-sa/3.0/legalcode 
