@@ -26,7 +26,7 @@ Lightness is the vertical position on the hull (from black to white). Since we a
 instead of delays for generating animation I used the millis() function - a quiet common trick nowadays to do delays without stalling your µC. You can see the idea in one of the Example script. A downside is that you cant use delay() in your script without stalling the animation. Anyways - cause we not using delay you can do things like start stop animations by the push of an button - **at any time!**
 
 ---
-###Thats nice! but how do i use it ?
+### Thats nice! but how do i use it ?
 A few simple steps:
 * Include the libary `#include <RGBControl.h>`
 * Set up an Controller Object `RGBControl Controller(red pin, green pin, blue pin, activeHigh/activeLow)` **_Note:_** activeHigh/ activeLow defines the usage of your output: **Your LED lights up when your pin is high ? - use activeHigh**
