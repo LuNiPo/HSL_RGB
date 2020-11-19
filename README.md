@@ -34,7 +34,9 @@ A few simple steps:
   * `Controller.HSL(colorAngle, lightness)` For displaying single colors
   * `Controller.HSL_Fade(speed, lightness)` For fading throught the whole spectrum. _(won't work with delay())_
   * `Controller.HSL_Area_Fade(speed,Angle,fadeAngle,lightness)` Fades between 2 Colors. _(won't work with delay())_
-  * `Controller.HSL_Hard_Fade(timePerColor,numberOfColors,lightness)` Fades through whole spectrum using predefined number of Steps. _(maybe works with delay()_
+  * `Controller.HSL_Hard_Fade(timePerColor,numberOfColors,lightness)` Fades through whole spectrum using predefined number of Steps. _(maybe works with delay() when timePerColor > delay()_
+  * `Controller.HSL_Blink(onTime, periodTime, transisionTime, Color)` Do sum blinking - and be able to do some fading from off to on. Transision time is added o the off time period therefor periode time must be > 2 * transisionTime + onTime _(will maybe work with delays() when no transision time is used and period time is bigger than delay())_
+  * `Controller.RGB(red,green,blue)` classical way of setting RGB values in percent (0-100) - like why not since we've already an controller object.
 ---
 Image source :
 HSL_color_solid_cylinder.png: SharkD derivative work: SharkD Talk (https://commons.wikimedia.org/wiki/File:HSL_color_solid_cylinder_saturation_gray.png), „HSL color solid cylinder saturation gray“, https://creativecommons.org/licenses/by-sa/3.0/legalcode 
