@@ -1,9 +1,9 @@
-
 /*
   RGBcontroll.cpp - Library for controlling RGB_LEDs using HSL values.
   Created by Lukas N. Possenig, November 10, 2020.
   Released into the public domain.
 */
+
 #ifndef ledcontrol_h
 #define ledcontrol_h
 #include <Arduino.h>
